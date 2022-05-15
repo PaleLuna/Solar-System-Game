@@ -79,8 +79,8 @@ GameObject:
   - component: {fileID: 4841219074764246845}
   - component: {fileID: 1718861771910691919}
   - component: {fileID: 906070692026824246}
-  - component: {fileID: 2937018833774935042}
   - component: {fileID: 7628254682650250556}
+  - component: {fileID: 7526239435231340232}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -151,19 +151,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2937018833774935042
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5236594251875390700}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!96 &7628254682650250556
 TrailRenderer:
   serializedVersion: 2
@@ -271,3 +258,15 @@ TrailRenderer:
   m_MinVertexDistance: 0
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &7526239435231340232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236594251875390700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f404093e37ff64f9c3208ba0e0861a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

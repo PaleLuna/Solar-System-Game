@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4023037969095675600}
   - component: {fileID: 71215791780558421}
   - component: {fileID: 740784123673737507}
-  - component: {fileID: 8100992523957026199}
   - component: {fileID: 8100992523957026198}
+  - component: {fileID: 17572782821514581}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -83,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8100992523957026199
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4917742733458060502}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: -0.00000032782555, y: 0, z: 0.00000029802322}
 --- !u!96 &8100992523957026198
 TrailRenderer:
   serializedVersion: 2
@@ -146,7 +133,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.02218628
+        value: 0.007904053
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -203,6 +190,18 @@ TrailRenderer:
   m_MinVertexDistance: 0
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &17572782821514581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4917742733458060502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f404093e37ff64f9c3208ba0e0861a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7099716782231269012
 GameObject:
   m_ObjectHideFlags: 0

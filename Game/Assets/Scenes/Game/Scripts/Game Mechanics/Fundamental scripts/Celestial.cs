@@ -61,6 +61,8 @@ public class Celestial : MonoBehaviour
         {
             planetTransform = transform.GetChild(0).GetComponent<Transform>();
             planetTransform.rotation *= Quaternion.Euler(0, 0, -rotaryAxisTilt);
+
+            planetTransform.GetComponent<TrailControl>().enabled = true;
         }
     }
 

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2751871081834288896}
   - component: {fileID: 8558871357468361478}
   - component: {fileID: 8558871357468361479}
-  - component: {fileID: 8558871357468361476}
   - component: {fileID: 8558871357468361477}
+  - component: {fileID: 4533906165351043266}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -83,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8558871357468361476
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8558871357468361474}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: -0.00000032782555, y: 0, z: 0.00000029802322}
 --- !u!96 &8558871357468361477
 TrailRenderer:
   serializedVersion: 2
@@ -203,6 +190,18 @@ TrailRenderer:
   m_MinVertexDistance: 0
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &4533906165351043266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558871357468361474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f404093e37ff64f9c3208ba0e0861a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8558871358479959399
 GameObject:
   m_ObjectHideFlags: 0

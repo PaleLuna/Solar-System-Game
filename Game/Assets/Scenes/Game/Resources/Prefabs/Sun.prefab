@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 4014561830598010654}
   - component: {fileID: 1977389395}
   - component: {fileID: 6993740412867286697}
-  - component: {fileID: 1977389399}
   - component: {fileID: 1977389400}
+  - component: {fileID: 1325536792}
   m_Layer: 0
   m_Name: Sun
   m_TagString: SpaceObject
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -104,7 +104,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -163,19 +163,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1977389399
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2948677210816111929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: -0.00000032782555, y: 0, z: 0.00000029802322}
 --- !u!114 &1977389400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,3 +182,15 @@ MonoBehaviour:
   orbitalInclinationInDegrees: 0
   rotaryAxisTilt: 7.25
   rotationVelocity: 0.01
+--- !u!122 &1325536792
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2948677210816111929}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4284980424
+  m_Size: 1.44
