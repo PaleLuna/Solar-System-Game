@@ -17,15 +17,19 @@ public class CameraTracking : MonoBehaviour
 
     private void Start()
     {
+        transform.position = Vector3.zero;
         cameraControl = GetComponent<CameraControl>();
+        if (cameraControl)
+            cameraControl.Clear();
         SetNewTarget(target);
     }
 
     private void FixedUpdate()
     {
-        /*if (cameraControl)
-            cameraControl.CameraRotate(target);*/
-        transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(targetPosition), ref velocity, smoothTime);
+        if (cameraControl)
+            targetPosition = cameraControl.CameraRotate();
+
         transform.LookAt(target);
+        transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(targetPosition), ref velocity, smoothTime);
     }
 }

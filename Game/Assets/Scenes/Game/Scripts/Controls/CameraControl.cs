@@ -10,23 +10,28 @@ public class CameraControl : MonoBehaviour
     [SerializeField] private float zoomClampMin;
     [SerializeField] private float zoomClampMax;
 
+    private Vector3 offset;
+
     private float axisX = 0;
     private float axisY = 0;
 
-    public void CameraRotate(Transform target)
-    {
-        transform.localEulerAngles = Rotate();
 
-        transform.position = transform.localRotation * Zoom() + target.position;
+    public void Clear()
+    {
+        offset = Vector3.zero;
     }
 
-    private Vector3 Zoom()
+    public Vector3 CameraRotate()
     {
-        Vector3 zoomOffset = Vector3.zero;
-        zoomOffset.z += Input.GetAxis("Mouse ScrollWheel") * zoomSensetivity;
-        zoomOffset.z = Mathf.Clamp(zoomOffset.z, zoomClampMin, zoomClampMax);
+        Zoom();
 
-        return zoomOffset;
+        return offset;
+    }
+
+    private void Zoom()
+    {
+        offset += transform.forward * Input.GetAxis("Mouse ScrollWheel") * zoomSensetivity;
+        offset = Vector3.ClampMagnitude(offset, 10);
     }
     private Vector3 Rotate()
     {
@@ -37,4 +42,8 @@ public class CameraControl : MonoBehaviour
         return new Vector3(-axisX, axisY, 0);
     }
 
+    private void Start()
+    {
+        offset = Vector3.zero;
+    }
 }

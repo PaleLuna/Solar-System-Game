@@ -12,13 +12,15 @@ public class SolarSystem : MonoBehaviour
     {
         return celestials[ind];
     }
-    public Vector3 GetCelestialPos(int ind)
+    public Transform GetCelestialTransform(int ind)
     {
-        return celestials[ind].transform.position;
+        return celestials[ind].transform;
     }
 
-    private void Start()
+    private void Awake()
     {
-        celestials = GameObject.FindObjectsOfType(typeof(Celestial)) as Celestial[];
+        celestials = new Celestial[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+            celestials[i] = transform.GetChild(i).GetComponent<Celestial>();
     }
 }

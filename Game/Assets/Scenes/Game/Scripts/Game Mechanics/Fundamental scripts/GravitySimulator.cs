@@ -18,14 +18,6 @@ public class GravitySimulator : MonoBehaviour
     {
         Gravity();
     }
-    private void Gravity()
-    {
-        for (int i = 0; i < celestials.GetSize(); i++)
-            for (int j = 0; j < celestials.GetSize(); j++)
-                if (!celestials.at(i).Equals(celestials.at(j)))
-                    celestials.at(i).MoveWithGravity(celestials.at(j), G);
-    }
-
     private void InitialVelocity()
     {
         for (int i = 0; i < celestials.GetSize(); i++)
@@ -33,6 +25,11 @@ public class GravitySimulator : MonoBehaviour
                 if (!celestials.at(i).Equals(celestials.at(j)))
                     celestials.at(i).SetUpVelocity(celestials.at(j), G);
     }
-
-
+    private void Gravity()
+    {
+        for (int i = 0; i < celestials.GetSize(); i++)
+            for (int j = 0; j < celestials.GetSize(); j++)
+                if (!celestials.at(i).Equals(celestials.at(j)))
+                    celestials.at(i).MoveWithGravity(celestials.at(j), G);
+    } 
 }
