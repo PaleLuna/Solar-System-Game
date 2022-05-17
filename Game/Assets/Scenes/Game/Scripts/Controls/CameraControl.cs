@@ -2,48 +2,54 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    [Header("Чувствительность")]
-    [SerializeField] private float axisSensetivity;
-    [SerializeField] private float zoomSensetivity;
+	[Header("Параметры вращения")]
+	[SerializeField] private float mouseSensetivity;
+	[SerializeField] private float axisYLimit;
 
-    [Header("Ограничения")]
-    [SerializeField] private float zoomClampMin;
-    [SerializeField] private float zoomClampMax;
+	[Header("Параметры \"Zoom\"")]
+	[SerializeField] private float zoomSensetivity;
+	[SerializeField] private float minZoom;
+	[SerializeField] private float maxZoom;
 
-    private Vector3 offset;
+	private Vector3 pos;
+	private Vector3 rotation;
+	private float axisX = 0;
+	private float axisY = 0;
 
-    private float axisX = 0;
-    private float axisY = 0;
-
-
-    public void Clear()
+	public void SetNewTarget()
     {
-        offset = Vector3.zero;
+		pos = Vector3.zero;
     }
 
-    public Vector3 CameraRotate()
+	public Vector3 CamOffset()
     {
-        Zoom();
-
-        return offset;
+		Zoom();
+		transform.localEulerAngles = rotation;
+		
+		return transform.localRotation * pos;
     }
-
-    private void Zoom()
+	private void Zoom()
+	{
+		pos.z += Input.GetAxis("Mouse ScrollWheel") * zoomSensetivity;
+		pos.z = Mathf.Clamp(pos.z, -Mathf.Abs(maxZoom), -Mathf.Abs(minZoom));
+	}
+	private void Rotation(float axisX, float axisY)
     {
-        offset += transform.forward * Input.GetAxis("Mouse ScrollWheel") * zoomSensetivity;
-        offset = Vector3.ClampMagnitude(offset, 10);
-    }
-    private Vector3 Rotate()
-    {
-        axisY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * axisSensetivity;
-        axisX += Input.GetAxis("Mouse Y") * axisSensetivity;
+		this.axisX += axisY * mouseSensetivity;
+		this.axisX = Mathf.Clamp(this.axisX, -axisYLimit, axisYLimit);
+		this.axisY = transform.localEulerAngles.y + axisX * mouseSensetivity;
 
-
-        return new Vector3(-axisX, axisY, 0);
-    }
+		rotation = new Vector3(this.axisX, this.axisY, 0);
+	}
 
     private void Start()
     {
-        offset = Vector3.zero;
+		rotation = Vector3.zero;
+		TouchDetected.touch += Rotation;
+
+		pos = Vector3.zero;
+
+		axisY = Mathf.Abs(axisY);
+		axisY = (axisYLimit > 90 ? axisYLimit : 90);
     }
 }
