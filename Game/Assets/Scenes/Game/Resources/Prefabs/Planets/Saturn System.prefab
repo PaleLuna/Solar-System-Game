@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4305010905719750059}
   - component: {fileID: 4981633936375366791}
   m_Layer: 0
-  m_Name: Saturn
+  m_Name: SaturnModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7618978022880506522}
   m_Father: {fileID: 4305010906428295067}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -232,7 +233,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4305010905719750058}
-  - {fileID: 7618978022880506522}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -267,7 +267,7 @@ MonoBehaviour:
   isMoving: 1
   mass: 95.159
   radius: 0.085
-  distanceFromTheSun: 143
+  distanceFromTheSun: 71.5
   orbitalInclinationInDegrees: 2.489
   rotaryAxisTilt: 26.73
   rotationVelocity: 0.05
@@ -276,12 +276,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4305010906428295067}
+    m_TransformParent: {fileID: 4305010905719750058}
     m_Modifications:
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8500001
       objectReference: {fileID: 0}
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
@@ -301,27 +311,27 @@ PrefabInstance:
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9645939
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12699115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.030171588
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.22917603
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
@@ -331,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 490874888034669053, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -26.73
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 921083627060173903, guid: 17c2db0f9a8b0f445a5372a6b2e39143,
         type: 3}

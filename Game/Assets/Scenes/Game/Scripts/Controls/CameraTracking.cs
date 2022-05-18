@@ -25,7 +25,7 @@ public class CameraTracking : MonoBehaviour
         SetNewTarget(target);
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(cameraControl.CamOffset()), ref velocity, smoothTime);
     }
