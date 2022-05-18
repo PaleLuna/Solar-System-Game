@@ -24,7 +24,7 @@ public class TouchDetected : MonoBehaviour
             float axisX = (cam.ScreenToViewportPoint(Input.mousePosition).x - startPos.x);
             float axisY = (cam.ScreenToViewportPoint(Input.mousePosition).y - startPos.y);
 
-            touch?.Invoke(axisX * Time.deltaTime, axisY * Time.deltaTime);
+            touch?.Invoke(axisX * Sensetivity * Time.deltaTime , -axisY * Sensetivity * Time.deltaTime);
         }
 
     }

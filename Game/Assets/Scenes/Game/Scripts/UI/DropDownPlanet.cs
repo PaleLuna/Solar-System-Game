@@ -6,14 +6,15 @@ using TMPro;
 public class DropDownPlanet : MonoBehaviour
 {
     [SerializeField] private SolarSystem solarSystem;
-    [SerializeField] private CameraTracking cameraTracking;
 
     private TMP_Dropdown dropdown;
 
+    public delegate void ChangePlanet(Transform newTarget);
+    public static event ChangePlanet changePlanet;
+
     public void InputMenu(int val)
     {
-        if (cameraTracking)
-            cameraTracking.SetNewTarget(solarSystem.GetCelestialTransform(val));
+        changePlanet?.Invoke(solarSystem.GetCelestialTransform(val));
     }
 
     private void Start()
