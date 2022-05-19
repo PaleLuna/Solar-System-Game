@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0030012687, g: 0.0028074654, b: 0.00311656, a: 1}
+  m_IndirectSpecularColor: {r: 0.0030079158, g: 0.0028144114, b: 0.0031242447, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -964,7 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe0d5450b46f7849a822719e75d44c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensetivity: 3
+  Sensetivity: 6
 --- !u!1 &1022700826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +1943,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4981633936375366791, guid: e7daf1689f5e5a74e91417381b072752,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7daf1689f5e5a74e91417381b072752, type: 3}
 --- !u!1001 &4407757139654187725
@@ -1952,6 +1957,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1981924270}
     m_Modifications:
+    - target: {fileID: 4176463442128847984, guid: 8c599a919f84eed48a88f7d2ddc261da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4407757137998957968, guid: 8c599a919f84eed48a88f7d2ddc261da,
         type: 3}
       propertyPath: m_Name
@@ -2099,7 +2109,7 @@ PrefabInstance:
     - target: {fileID: 6208916978631288554, guid: 84445f252d9317943bd4a9d0d068ebd7,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84445f252d9317943bd4a9d0d068ebd7, type: 3}
@@ -2124,6 +2134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UranusModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526239435231340232, guid: dce19766ad066c7499aedc4f2898dcd8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7683536476176979258, guid: dce19766ad066c7499aedc4f2898dcd8,
         type: 3}
@@ -2195,6 +2210,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1981924270}
     m_Modifications:
+    - target: {fileID: 17572782821514581, guid: 9417d32ac6300234da6e71be435729a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 740784123673737507, guid: 9417d32ac6300234da6e71be435729a7,
         type: 3}
       propertyPath: m_CastShadows
@@ -2275,6 +2295,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8100992523957026198, guid: 9417d32ac6300234da6e71be435729a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9417d32ac6300234da6e71be435729a7, type: 3}
 --- !u!1001 &7346152994199157939
@@ -2298,6 +2323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NeptuneModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418513797712881082, guid: 55d24e82946c8ca41b0a3a80f4b7ade0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9139618673107721684, guid: 55d24e82946c8ca41b0a3a80f4b7ade0,
         type: 3}
@@ -2369,6 +2399,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1981924270}
     m_Modifications:
+    - target: {fileID: 4533906165351043266, guid: 32b02f9618b538f429cbda8e33424e6d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8558871357468361474, guid: 32b02f9618b538f429cbda8e33424e6d,
         type: 3}
       propertyPath: m_Name
@@ -2377,6 +2412,11 @@ PrefabInstance:
     - target: {fileID: 8558871357468361474, guid: 32b02f9618b538f429cbda8e33424e6d,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558871357468361477, guid: 32b02f9618b538f429cbda8e33424e6d,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8558871357468361479, guid: 32b02f9618b538f429cbda8e33424e6d,
@@ -2461,7 +2501,7 @@ PrefabInstance:
     - target: {fileID: 979982236586824285, guid: 76eab0b2bd09fb045b5e4f0a7b6066b9,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4176819663736907839, guid: 76eab0b2bd09fb045b5e4f0a7b6066b9,
         type: 3}
@@ -2547,6 +2587,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1981924270}
     m_Modifications:
+    - target: {fileID: 2577164441116050547, guid: f46b193f2a1ec8d4ea91f164f0153305,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9202018068356336388, guid: f46b193f2a1ec8d4ea91f164f0153305,
         type: 3}
       propertyPath: distanceFromTheSun
