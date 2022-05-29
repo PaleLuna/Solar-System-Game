@@ -13,7 +13,7 @@ public class CameraTracking : MonoBehaviour
         this.target = target;
         transform.LookAt(target);
 
-        cameraControl.SetNewTarget();
+        cameraControl.ResetPos();
     }
 
     private void Start()

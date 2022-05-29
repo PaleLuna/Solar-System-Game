@@ -16,7 +16,7 @@ public class CameraControl : MonoBehaviour
 	private float axisX = 0;
 	private float axisY = 0;
 
-	public void SetNewTarget()
+	public void ResetPos()
     {
 		pos = Vector3.zero;
     }
