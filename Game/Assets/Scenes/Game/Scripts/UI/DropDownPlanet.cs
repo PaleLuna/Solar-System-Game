@@ -25,6 +25,8 @@ public class DropDownPlanet : MonoBehaviour
 
         for (int i = 0; i < solarSystem.GetSize(); i++)
             dropdown.options.Add(new TMP_Dropdown.OptionData() { text = solarSystem.at(i).name });
+
+        changePlanet?.Invoke(solarSystem.GetCelestialTransform(0));
     }
 
 }

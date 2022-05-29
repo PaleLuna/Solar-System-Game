@@ -13,9 +13,9 @@ public class CamTargetObservation : MovementState
     {
         Movement();
     }
-
     protected override void Movement()
     {
+        Debug.Log("Hi");
         transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(cameraControl.CamOffset()), ref velocity, smoothTime);
     }
 
@@ -23,19 +23,19 @@ public class CamTargetObservation : MovementState
     {
         _cameraStateSwitch.StateSwitch<MovingTowardsTarget>();
     }
-
-    private void Start()
+    protected override void SetTarget(Transform newTarget)
     {
-        cameraControl = GetComponent<CameraControl>();
-        DropDownPlanet.changePlanet += ChangeTarget;
-        transform.position = Vector3.zero;
-    }
-
-    private void ChangeTarget(Transform newTarget)
-    {
-        target = newTarget;
         cameraControl.ResetPos();
 
         ChangeState();
     }
+
+    private void Start()
+    {
+        DropDownPlanet.changePlanet += SetTarget;
+
+        cameraControl = GetComponent<CameraControl>();
+        transform.position = Vector3.zero;
+    }
+
 }

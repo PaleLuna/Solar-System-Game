@@ -19,7 +19,11 @@ public class CameraControl : MonoBehaviour
 	public void ResetPos()
     {
 		pos = Vector3.zero;
-    }
+		rotation = Vector3.zero;
+
+		axisX = 0;
+		axisY = 0;
+	}
 
 	public Vector3 CamOffset()
     {

@@ -2,32 +2,49 @@ using UnityEngine;
 
 public class MovingTowardsTarget : MovementState
 {
-    [SerializeField] private float speed;
-    [SerializeField] private Vector3 offset;
-    private float step = 0.0F;
+    [SerializeField] private float timeToTrevelInSeconds;
+    [SerializeField] private float offset;
 
-    public void SetTarget(Transform newTarget)
-    {
-        target = newTarget;
-    }
+    private float startTime;
+    private float fracComplete;
+    private Vector3 startPosition;
+    private Vector3 targetPos;
 
     public override void Run()
     {
         Movement();
     }
-
     protected override void Movement()
     {
-        if (step > 1)
+        Debug.Log(fracComplete);
+
+        if (fracComplete >= 1)
             ChangeState();
 
-        transform.position = Vector3.Slerp(transform.position, target.TransformPoint(offset), step);
+        fracComplete = ((Time.time - startTime) / timeToTrevelInSeconds);
+
+        transform.position = Vector3.Slerp(startPosition, target.TransformPoint(targetPos), fracComplete);
         transform.LookAt(target);
-        step += Time.deltaTime;
+    }
+
+    protected override void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+
+        startTime = Time.time;
+        fracComplete = 0.0F;
+
+        transform.LookAt(target);
+        startPosition = transform.position;
+        targetPos = target.transform.forward * -offset;
     }
     protected override void ChangeState()
     {
-        step = 0;
         _cameraStateSwitch.StateSwitch<CamTargetObservation>();
+    }
+
+    private void Start()
+    {
+        DropDownPlanet.changePlanet += SetTarget;
     }
 }

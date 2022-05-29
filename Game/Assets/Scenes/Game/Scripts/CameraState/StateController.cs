@@ -13,7 +13,6 @@ public class StateController : MonoBehaviour, ICameraStateSwitch
         for (int i = 0; i < allStates.Count; i++)
             allStates[i].Init(this);
         currentState = allStates[0];
-        
     }
 
     private void LateUpdate()
