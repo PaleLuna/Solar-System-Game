@@ -15,7 +15,6 @@ public class CamTargetObservation : MovementState
     }
     protected override void Movement()
     {
-        Debug.Log("Hi");
         transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(cameraControl.CamOffset()), ref velocity, smoothTime);
     }
 

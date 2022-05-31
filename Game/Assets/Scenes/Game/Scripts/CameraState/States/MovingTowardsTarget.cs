@@ -16,14 +16,12 @@ public class MovingTowardsTarget : MovementState
     }
     protected override void Movement()
     {
-        Debug.Log(fracComplete);
-
         if (fracComplete >= 1)
             ChangeState();
 
         fracComplete = ((Time.time - startTime) / timeToTrevelInSeconds);
 
-        transform.position = Vector3.Slerp(startPosition, target.TransformPoint(targetPos), fracComplete);
+        transform.position = Vector3.Lerp(startPosition, target.TransformPoint(targetPos), fracComplete);
         transform.LookAt(target);
     }
 

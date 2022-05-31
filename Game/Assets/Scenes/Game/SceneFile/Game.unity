@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0030079158, g: 0.0028144114, b: 0.0031242447, a: 1}
+  m_IndirectSpecularColor: {r: 0.0030012687, g: 0.0028074654, b: 0.00311656, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -845,6 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
+  - component: {fileID: 963194234}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194231}
@@ -952,7 +953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924a9161ea849924a84ef6dc1307b6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTrevelInSeconds: 5
+  timeToTrevelInSeconds: 3
   offset: 5
 --- !u!114 &963194231
 MonoBehaviour:
@@ -996,6 +997,102 @@ MonoBehaviour:
   allStates:
   - {fileID: 963194232}
   - {fileID: 963194230}
+--- !u!82 &963194234
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 34adc0aea9dce7f4e99b1fa5b73cb6fb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1022700826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1407,7 @@ PrefabInstance:
     - target: {fileID: 2948677210816111929, guid: f2477ebd11ec2aa4eaae00e2a5085c09,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4014561830598010654, guid: f2477ebd11ec2aa4eaae00e2a5085c09,
         type: 3}
@@ -1377,7 +1474,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1325536792, guid: f2477ebd11ec2aa4eaae00e2a5085c09, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f2477ebd11ec2aa4eaae00e2a5085c09, type: 3}
 --- !u!1 &1229726197
 GameObject:
@@ -1918,6 +2016,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1981924270}
     m_Modifications:
+    - target: {fileID: 4305010906428295064, guid: e7daf1689f5e5a74e91417381b072752,
+        type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305010906428295064, guid: e7daf1689f5e5a74e91417381b072752,
+        type: 3}
+      propertyPath: distanceFromTheSun
+      value: 143
+      objectReference: {fileID: 0}
     - target: {fileID: 4305010906428295066, guid: e7daf1689f5e5a74e91417381b072752,
         type: 3}
       propertyPath: m_Name
@@ -2002,6 +2110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mars
       objectReference: {fileID: 0}
+    - target: {fileID: 4407757137998957970, guid: 8c599a919f84eed48a88f7d2ddc261da,
+        type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4407757137998957971, guid: 8c599a919f84eed48a88f7d2ddc261da,
         type: 3}
       propertyPath: m_RootOrder
@@ -2081,6 +2194,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EarthModel
       objectReference: {fileID: 0}
+    - target: {fileID: 5217570191846361666, guid: 84445f252d9317943bd4a9d0d068ebd7,
+        type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 5217570191846361667, guid: 84445f252d9317943bd4a9d0d068ebd7,
         type: 3}
       propertyPath: m_RootOrder
@@ -2157,8 +2275,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1125746890285928665, guid: dce19766ad066c7499aedc4f2898dcd8,
         type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125746890285928665, guid: dce19766ad066c7499aedc4f2898dcd8,
+        type: 3}
       propertyPath: distanceFromTheSun
-      value: 114
+      value: 228
       objectReference: {fileID: 0}
     - target: {fileID: 2431422122279165171, guid: dce19766ad066c7499aedc4f2898dcd8,
         type: 3}
@@ -2275,6 +2398,11 @@ PrefabInstance:
       propertyPath: isMoving
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7099716782231269014, guid: 9417d32ac6300234da6e71be435729a7,
+        type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 7099716782231269015, guid: 9417d32ac6300234da6e71be435729a7,
         type: 3}
       propertyPath: m_RootOrder
@@ -2351,8 +2479,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030874022463456855, guid: 55d24e82946c8ca41b0a3a80f4b7ade0,
         type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030874022463456855, guid: 55d24e82946c8ca41b0a3a80f4b7ade0,
+        type: 3}
       propertyPath: distanceFromTheSun
-      value: 225
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 5331686528263240956, guid: 55d24e82946c8ca41b0a3a80f4b7ade0,
         type: 3}
@@ -2464,6 +2597,11 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8558871358479959398, guid: 32b02f9618b538f429cbda8e33424e6d,
+        type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 8558871358479959399, guid: 32b02f9618b538f429cbda8e33424e6d,
         type: 3}
       propertyPath: m_Name
@@ -2558,6 +2696,11 @@ PrefabInstance:
       propertyPath: rotaryAxisTilt
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9101556228659395505, guid: 76eab0b2bd09fb045b5e4f0a7b6066b9,
+        type: 3}
+      propertyPath: rotationVelocity
+      value: 0.0095
+      objectReference: {fileID: 0}
     - target: {fileID: 9101556228659395507, guid: 76eab0b2bd09fb045b5e4f0a7b6066b9,
         type: 3}
       propertyPath: m_RootOrder
@@ -2634,8 +2777,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202018068356336388, guid: f46b193f2a1ec8d4ea91f164f0153305,
         type: 3}
+      propertyPath: rotationVelocity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202018068356336388, guid: f46b193f2a1ec8d4ea91f164f0153305,
+        type: 3}
       propertyPath: distanceFromTheSun
-      value: 39
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 9202018068356336394, guid: f46b193f2a1ec8d4ea91f164f0153305,
         type: 3}
